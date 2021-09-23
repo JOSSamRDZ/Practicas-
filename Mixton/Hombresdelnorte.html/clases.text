@@ -1,0 +1,58 @@
+
+
+class Conquistador 
+{
+    constructor (n, pva,  a,e)
+    {   
+        this.imagen = new Image ()
+        this.nambre= n;
+        this.provincia= pva;
+        this.lifepoints= 150;
+        this.atack= a;
+        this.habilidadEspecial= e;
+
+        this.imagen.src = imagenesC[this.nambre];
+        
+    }
+    mostrarConquistadores ()
+    {
+        document.write ("<p>");
+        document.body.appendChild (this.imagen);
+        document.write ("<strong>" + this.nambre +"</strong><br />");
+        document.write("Provincia: " + this.provincia + "<br />");
+        document.write("LP: " + this.lifepoints + "<br />");
+        document.write("AP: " + this.atack + "<br />");
+        document.write("Especial: " + this.habilidadEspecial + "<br /> <hr />");
+        document.write("</p>");
+    }
+}
+
+class indigenas
+{
+    constructor (n, atp, lp, a, e )
+    {
+        this.imagen= new Image ()
+        this.nambre= n;
+        this.altepetl= atp;
+        this.lifepoints= lp;
+        this.atack= a;
+        this.habilidadEspecial= e;
+
+        this.imagen.src = imagenesI [this.nambre];
+        
+    }
+    mostrarIndigenas ()
+    {
+        document.write ("<p>");
+        document.body.appendChild (this.imagen);
+        document.write ("<strong>" + this.nambre +"</strong><br />");
+        document.write("Provincia: " + this.altepetl + "<br />");
+        document.write("LP: " + this.lifepoints + "<br />");
+        document.write("AP: " + this.atack + "<br />");
+        document.write("Especial: " + this.habilidadEspecial + "<br /> <hr />");
+        document.write("</p>");
+    }
+}
+
+    
+

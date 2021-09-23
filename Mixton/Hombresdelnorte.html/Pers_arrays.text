@@ -1,0 +1,60 @@
+//Elejir y ver personajes y habilidades
+    var boton_ver_conquistadores= document.getElementById  ("conquuest");
+    boton_ver_conquistadores.addEventListener("click", mostrarA);
+    var boton_ver_Tlatoanis = document.getElementById ("pilis");
+    boton_ver_Tlatoanis.addEventListener ("click", mostrarB);
+
+
+//arreglo DOOM items
+
+
+//Imagenes Conquistadores 
+var imagenesC = []
+imagenesC ["Panfilo de Narvaes"]= "narvaes.png"
+imagenesC ["Pedro de Alvarado"]= "qlvarado.png"
+imagenesC ["Hernan Cortes"]= "cortes.png"
+
+
+//imagenes indigenas
+var imagenesI= []
+imagenesI ["MoctezumaII"]= "mocte.jpg"
+imagenesI ["Ixtlilxochitl"]= "xico.jpg"
+imagenesI ["Xicohténcatl"]= "xtli.png"
+
+
+
+// heroes eurpeos
+var conquistadores = []
+conquistadores.push(new Conquistador ("Panfilo de Narvaes", "Castilla ", 100, "Recarga vida "));
+conquistadores.push (new Conquistador ("Pedro de Alvarado","Badajos ", 250,"Aumeta su ataque 5 segundos " ));
+conquistadores.push (new Conquistador ("Hernan Cortes", "Extremadura", 200, "Diesma fuerza del contrincante" ));
+
+//jugador
+
+var miliciano = []
+miliciano.push (new Conquistador("usuario strings", "usuario select",30,70 ));
+
+var pili = []
+pili.push (new indigenas ("usuario strings", "usuario select", 100, 80));
+
+// heroes Indigenas
+var Tlatoanis = []
+Tlatoanis.push (new indigenas ("MoctezumaII", "Tenochtitlan",800, 700 ,  " Ataca dos veces " ));
+Tlatoanis.push (new indigenas ("Ixtlilxochitl", "Culhuacan", 500, 400 , "Enboscada "));
+Tlatoanis.push (new indigenas ("Xicohténcatl", "Tlaxcala", 600, 300 , " Puedes usar una habilidad especial de conquistador " ));
+
+function mostrarA()
+{
+   for (var x of conquistadores)
+   {
+       x.mostrarConquistadores ();
+   }
+}
+
+function mostrarB ()
+{
+    for (var i of Tlatoanis)
+    {
+        i.mostrarIndigenas ()
+    }
+}
